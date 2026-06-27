@@ -37,45 +37,15 @@ Deployment
 
 
 
-Our Main Project
 
-Instead of making 10 tiny apps, we'll improve one strong project.
-
-Your Citizen Service Portal is perfect because it already includes many real React concepts:
-
-Navbar
-Cards
-Forms
-Login
-Routing
-API (later)
-Reusable components
-
-That project will become your portfolio piece.
-
-Daily Time Plan (Since You Have Limited Time)
-
-I don't want you spending 5 hours watching videos.
-
-If you can give me 2 hours a day, that's enough.
-
-Hour 1
-Learn one concept with me.
-Ask questions.
-Hour 2
-Code the task yourself.
-Send me your code if you get stuck.
-A New Rule
-
-For the next 15 days:
 
 
 For these 15 days:
 
-Code every day, even if it's only 30–60 minutes.
-Don't compare yourself to people who've been learning for a year.
-When you're stuck, try first, then ask me.
-My Promise
+1. Code every day, even if it's only 30–60 minutes.
+2. Don't compare yourself to people who've been learning for a year.
+3. When you're stuck, try first, then ask me.
+
 
 
 And one last thing...
