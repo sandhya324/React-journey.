@@ -1,0 +1,133 @@
+🧠 Remember These 5 Things: 
+
+1. React is a JavaScript library.
+2. React builds UI using Components.
+3. A Component is a reusable piece of UI.
+4. Vite creates React projects.
+5. JSX looks like HTML but is actually JavaScript.
+
+
+
+
+🎯 Mini Practice (10 Minutes)
+Open your notebook and answer in your own words:
+
+Q1 What is React?
+
+Answer: React is a javascript library that is use to build UI in more optimal way, by dividing 500 line code in multiple components that can be reuse to build multiple pages without repeating the code.
+   <1 React helps build user interfaces (UI).
+   <2 Components can be reused within the same page and across different pages, not just to build multiple pages.
+
+Interview Answer : React is a JavaScript library used to build user interfaces by breaking them into reusable components. This makes applications easier to develop, maintain, and scale.
+
+
+
+Q2 Why do we use Components?
+Answer: We use components to reuse code without rewriting code or programs again to build same thing multiple times.
+
+
+Q3 What is Vite?
+Answer: Vite is use to build react project, it provide foudational compact bundle of files that is the  base to build any react project.
+
+    <1 Vite doesn't build React itself, It creates and runs a React project.
+    Think of it like this: Imagine you want to build a house.Vite gives you:
+    Empty house, Electricity, Water, Foundation
+
+Now you start decorating. React is the decoration and furniture. Vite is the ready-made foundation.
+
+Q4 What is JSX?
+Answer: JSX is a combination of HTML and JavaScript, it allows us to write React and JS.
+JSX looks like HTML, but it is not HTML.Example:
+<!-- <h1>Hello</h1> -->
+
+Looks like HTML. But React converts it into JavaScript behind the scenes.
+Think:
+
+     JSX
+      ↓
+     React understands it
+      ↓
+     JavaScript
+      ↓
+     Browser
+So remember: JSX is a syntax that lets us write HTML-like code inside JavaScript.
+
+
+
+
+
+
+
+💻 Homework
+
+Open your React project, Without copying from Google. Answer these:
+
+src -> What is this folder for?
+
+App.jsx -> What is this file?
+
+main.jsx -> Why do you think this file exists?
+
+Even if your answers are wrong, that's okay. I want to know how you're thinking.
+
+ 
+
+
+
+📝 Homework (15 Minutes)
+
+Draw this in your notebook:
+App
+
+│
+
+├── Navbar
+
+├── Hero
+
+├── Services
+
+│     ├── ServiceCard
+
+│     ├── ServiceCard
+
+│     └── ServiceCard
+
+├── FAQ
+
+└── Footer
+
+Then answer:
+
+Why is this structure better than writing everything inside App.jsx?
+
+Just 3–4 lines.
+
+
+
+
+
+
+⭐ Sneak Peek of Day-2
+
+Tomorrow, we'll write our first real React component.
+
+We'll understand every single line like this:
+
+const App = () => {
+  return (
+    <div>Hello</div>
+  );
+};
+
+export default App;
+
+We'll discuss:
+
+Why const?
+Why () =>?
+Why return?
+Why <div>?
+Why export default?
+
+By the end of Day-2, you won't just copy this code—you'll understand why every line exists.
