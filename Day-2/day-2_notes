@@ -1,0 +1,185 @@
+🚀 Day-2: Your First React Component
+
+
+By the end of today's class, you will understand this code completely:
+
+const App = () => {
+  return (
+    <div>Hello React</div>
+  );
+};
+
+export default App;
+
+
+
+
+
+
+📚 Today's Topics
+What is a Component?
+What is const?
+What is () =>?
+What is return?
+Why do we return JSX?
+What is export default?
+Homework
+Interview Question
+Daily Score
+
+
+
+Topic 1: What is a Component?
+Answer: Components are piece or block of reusable code, we create components and then assemble those in complete web page.
+ example: Imagine you're building a bicycle. Do you build the whole bicycle at once? No
+ You build: Wheel, seat, pedal, handle then you assemble them.
+ React works exactly like that.
+
+
+Topic 2: What is const?
+Answer: const App = () => { }
+ creates variable, But this variable stores a function, not a number. (we use const not let because in const the value cannot be reassigned , React components never need to be reassigned..)
+
+
+Topic 3: What is () => ?
+Answer: It's just another way to write a function. Think of it as a shortcut.
+
+
+Topic 4: What is return?
+Answer: This is one of the most important JavaScript keywords.Example:
+    function getNumber() {
+      return 10;
+    }    When we call: getNumber();
+
+The function gives back: 10
+That's what return means: "Give something back."
+
+
+Topic 5: Why do we return JSX?
+Answer:  Look:
+  return (
+    <div>Hello React</div>
+  );       
+    What are we giving back? We're giving React some JSX. React then displays it on the screen.
+
+Think: Component
+↓
+return JSX
+↓
+React
+↓
+Browser
+↓
+Screen
+Without return Nothing appears. Because we created JSX... but never gave it back to React.
+
+
+Topic 6: What is export default?
+Answer: export default App;  export means: "This component can now be used in other files." Think of it like: Create Component
+↓
+Export it
+↓
+Import it
+↓
+Use it
+
+
+Let's Read the Whole Code
+const App = () => { 👉 Create a component named App.
+return  (👉 Return something to React.
+<div>Hello React</div> 👉 This is the UI we want to show.
+); 👉 End of return.
+}; 👉 End of component.
+export default App; 👉 Allow other files to use this component.
+
+
+
+
+
+🧠 Interview Question
+
+1. Why do we use components?
+
+A good answer is: "Components help divide the UI into reusable and independent parts. This improves code reusability, readability, and maintenance."
+
+
+
+
+
+📝 Homework (20 Minutes)
+Part 1 (Theory)
+
+
+Q1 Why do we use const for components instead of let?
+Answer: we use const instead of let because components doesn't need to be reassign. using let we can reassign the value or variabl.
+  better:
+We use const because React components are not reassigned. Once a component is created, we don't change it to another function.
+ 
+Q2 What does return do?
+Answer: return keyword is used to return values to the react that react display on screen.
+     better:
+return returns JSX to React, and React renders that JSX on the screen.
+
+Q3 What happens if we remove return?
+Answer: It won't show or display anthing on screen.
+     better:
+
+
+Q4 Why do we write: export default App;
+Answer: so that we can use that component in other file by importing it .
+
+
+
+Part 2 (Coding)
+
+Open your React project. Inside App.jsx, change:
+
+<div>Hello React</div> to something like:
+
+<div>
+  <h1>Welcome Sandhya!</h1>
+  <p>I am learning React.</p>
+</div>
+
+Run it. Take a screenshot or paste the code tomorrow.
+
+
+
+
+
+
+
+👨‍🏫 Teacher's Tip of the Day 
+I'm going to teach you one habit that good React developers have.
+
+When you see code like this: const App = () => {}
+Don't ask: "How do I memorize this?"
+Ask: "What is each word doing?"
+For example:
+
+1. const → Creates a variable.
+2. App → The name of the component.
+3. = → Assigns a value.
+4. () => → Creates a function.
+5. return → Gives JSX back to React.
+6. export default → Makes the component available to other files.
+That's how developers read code.
+
+
+
+🌟 A small message from your teacher
+
+I have taught many concepts in conversations, and I can already see something about your learning style You don't learn by memorizing—you learn by understanding the reason behind things.
+That's a strength.
+It might feel slower today, but a few weeks from now you'll remember concepts much better than someone who only copied code. So keep asking "Why?"That one question will make you a much stronger React developer.
+
+
+👨‍🏫 Teacher's Feedback
+
+I'm noticing a pattern.
+Your strength: You understand concepts quickly when someone explains why they exist.
+Your weakness: Sometimes you remember the idea but not the exact technical wording.
+That's completely normal. We'll improve your vocabulary as we go.
+
+
+🏆 Overall Score: 9.8/10
