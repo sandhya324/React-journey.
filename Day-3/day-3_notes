@@ -1,0 +1,179 @@
+🚀 Day-3: Understanding Functions, Arrow Functions & Your First Real Component
+
+You'll know:
+
+What is a function?
+Why do we create components using functions?
+Why are there two ways?
+Which one should you use?
+What are ()?
+What are {}?
+Why does the component name start with a capital letter?
+
+
+
+
+
+
+Part 1 - Revision
+
+1. A function is...A reusable block of code that performs a specific task when it is called. Example:
+function greet() {
+    console.log("Hello");
+}
+greet();
+
+
+2. What is a React Component?
+Answer: A React Component is simply...A JavaScript function that returns JSX.
+   JavaScript Function + Returns JSX =  React Component
+
+Normal function:               React component:
+
+function add() {               function Navbar() {
+    return 10;                   return <h1>Navbar</h1>;
+}                              }
+
+
+3. Why Does the Component Name Start with a Capital Letter?
+why function Navbar() {}      Why not:   function navbar() {}
+Answer: Because React has a rule. If the name starts with a capital letter: Navbar
+React says: "Oh! This is a component." If it starts with a small letter: navbar
+React thinks: "This must be an HTML tag."
+
+
+4. Why Two Ways?
+Way 1: function Navbar() {
+          return <h1>Navbar</h1>;
+       }
+
+Way 2: const Navbar = () => {
+          return <h1>Navbar</h1>;
+       };
+Both are same, both create components, both return JSX, both work perfectly.
+Then why use the second one? Because modern React developers prefer it. You'll see it in:
+Companies | Courses | Open-source projects , So we'll mainly use: const Navbar = () => {}
+
+5. What are the Parentheses ()?
+Answer: They are used to receive inputs, these inputs are called parameters.
+Example: function greet(name) {
+           console.log(name);
+        }
+Now we call: greet("Sandhya");
+Output: Sandhya , The value "Sandhya" goes into the name parameter. Right now, our React component
+doesn't need any inputs.So we leave them empty: () Later, we'll put something inside them called props.
+
+
+6. What are Curly Braces {}?
+Answer: const Navbar = () => {} Curly braces define the body of the function.
+Everything inside: {} belongs to that function.
+ Example: function greet() { 
+            console.log("Hello");
+            console.log("Welcome");
+          } 
+Both lines belong to the function.
+
+
+
+
+🧠 One Very Important Thing
+When you write: <Navbar /> React calls the function for you.
+It's almost like React is doing this behind the scenes: Navbar();
+
+The function returns JSX. React takes that JSX and renders it on the screen.
+So when you use: <Navbar /> you're really asking React: "Please run the Navbar component and show me what it returns."
+
+
+
+
+
+🎯 Homework 
+Part 1 - Theory
+
+Q1. Why do we use a capital letter for component names?
+Answer: we use capital letter for component names because react has a rule that component name starts with capital letter if we use small letter so react will think that it a tag.
+One tiny improvement: Instead of saying -> React thinks it is a tag
+Say: React treats it as an HTML element.
+
+Q2.  What is the difference between a normal JavaScript function and a React component?
+Answer: Javascript function return a value and React component returns JSX to react and react display it on screen.  Even better answer: A React component is a JavaScript function that returns JSX.
+
+Q3. What do empty parentheses () mean in: const Navbar = () => {}
+Answer: empty parenthese means that this is a function , and later we can pass parameters in it .
+Small addition: Parentheses are also where we receive input. Example:
+ const Greeting = (name) => {} Later React will pass something here called Props.
+
+Q4. What do curly braces {} do?
+Answer: Curly braces define a block of code , the code that we want to display on the screen write inside the curly braces.
+--------One small correction. You wrote: the code that we want to display on screen.
+Actually, Curly braces do not display anything, They simply define the body of the function. 
+They're just saying: Everything inside belongs to this function.
+
+
+Q5 (Thinking Question ⭐) When we write: <Navbar /> Who calls the Navbar function? You?, React? or
+The browser? Explain your answer.
+Answer: When we write <Navbar/> React calls the Navbar function because React is responsible to display output on the browser. 
+React internally does something similar to Navbar(); Then it takes whatever is returned and renders it.
+
+
+
+.
+
+💻 Coding Homework
+Create a new file called: Greeting.jsx
+Inside it, try to write this without looking at my explanation:
+
+const Greeting = () => {
+  return (
+    <h1>Hello, I am learning React!</h1>
+  );
+};
+
+export default Greeting; T
+Then, in your App.jsx, import Greeting and display it.
+
+
+
+
+
+
+🎤 Interview Question
+1. Why do React components start with a capital letter?
+A good answer: "React uses capitalized names to identify custom components. Lowercase names are treated as HTML elements, while uppercase names are treated as React components."
+
+
+
+
+
+📅 Small Challenge for Tomorrow
+
+Tomorrow (Day-4), we'll learn something that every React developer uses every day:
+
+Props
+How one component can display different data
+Why props are called the "arguments of React"
+
+Once you understand props, you'll finally know how apps create multiple cards using one component—just like you wanted to understand for your Citizen Service Portal.
+
+
+
+
+
+
+
+
+
+
+
+
+⭐ One Important Suggestion
+From tomorrow, I'd like you to do one extra thing. Whenever we write code, read it aloud in English.
+
+For example: const Greeting = () => {}
+Read it like this: Create a constant called Greeting. It stores a function.
+
+Then return () Read: Return this JSX to React.
+
+Then <h1>Hello</h1> Read: Display a heading saying Hello.
+This habit may feel strange at first, but it will train you to understand code instead of memorizing it.
+
