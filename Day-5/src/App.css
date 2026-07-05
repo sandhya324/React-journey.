@@ -1,0 +1,45 @@
+/* 
+100px = Fixed size of 100 pixels.
+100vh = 100% of the viewport (browser window) height. */
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 30px;
+}
+
+.Container h1{
+  text-align: center;
+  color: #333;
+}
+.card {
+  width: 220px;
+  background: #df9393;
+  border-radius: 8px; 
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);   
+}
+
+.employee-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+.high{
+    color:green;
+    font-weight:bold;
+}
+
+.standard{
+    color:orange;
+    font-weight:bold;
+}

@@ -156,6 +156,7 @@ Part 2 (Thinking Challenge)
 
 Imagine you're building Netflix. What Props might a MovieCard component receive? Example:
 Movie Name, Poster, Rating Can you think of 5 Props? (No coding. Just think.)
+
 Answer: Movie Name, Poster, Rating, Cast Name, Director, realise date, ticket Price. (i thought about movies i forget that it was about netflix.)
 
 One thing to think about: Would Ticket Price exist on Netflix?Probably not, because Netflix is subscription-based. Instead, maybe:
