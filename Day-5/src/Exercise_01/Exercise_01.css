@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 30px;
+}
+.card{
+    width: 200px;
+    background-color: rgb(183, 243, 243);
+    padding: 30px;
+    border-radius: 8px;
+    margin:  10px;
+    box-shadow: 0 4px 10px rgb(68, 75, 75);
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.employee-list{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap: 20px;
+}
+.employeeCard h1{
+    text-align: center;
+    color: gray;
+}

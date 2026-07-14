@@ -3,7 +3,7 @@
 100vh = 100% of the viewport (browser window) height. */
 
 
-body {
+/* body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f4f4;
@@ -42,4 +42,4 @@ body {
 .standard{
     color:orange;
     font-weight:bold;
-}
+} */
