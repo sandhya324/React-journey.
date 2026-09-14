@@ -17,11 +17,16 @@ const App = () => {
 
     if( name === "" || email === "" || mobile === "" || city === "" || password === "" || confirmpass === ""){
       alert("Please Enter your details!");
-      retturn;
+      return;
     }
 
     if (password !== confirmpass) {
       alert("Passwords do not match");
+      return;
+    }
+
+    if(password.length < 6){
+      alert("Password should contain at least 6 letter");
       return;
     }
 
@@ -79,20 +84,18 @@ const App = () => {
          />
       </div>
 
-      <div className="form-input">
 
+      <div className="form-input">
         <label>City</label>
         <select 
             value={city}
             onChange={(e) => setCity(e.target.value)}
          >
-
          <option value="">Select City</option>
          <option>Dehradun</option>
          <option>Delhi</option>
          <option>Bangaluru</option>
         </select>
-         
       </div>
 
       <div className="form-input">
