@@ -17,7 +17,6 @@
 
 //      setSubmittedData({ ...formData });
 
-
 //     console.log("Submitted");
 //     console.log(formData);
 //   }
@@ -113,8 +112,6 @@
 //         <button>Submit</button>
 //       </form>
 
-
-
 //       {submittedData && (
 //         <div>
 //           <h2>Submitted Details</h2>
@@ -132,16 +129,6 @@
 // };
 
 // export default App;
-
-
-
-
-
-
-
-
-
-
 
 // 🏆 Mini Project – Student Registration Form
 
@@ -172,9 +159,8 @@
 //     agree: ""
 //   });
 
-
 //   const [submittedData, setSubmittedData] = useState(null);
-  
+
 //   function handleSubmit(e) {
 //     e.preventDefault();
 
@@ -267,7 +253,6 @@
 //         <button type="submit">Submit</button>
 //       </form>
 
-
 //       { submittedData && (
 //         <div>
 //           <h1>Submitted Data</h1>
@@ -284,16 +269,6 @@
 // };
 
 // export default App;
-
-
-
-
-
-
-
-
-
-
 
 // ⭐ Bonus Challenge – Citizen Complaint Form
 
@@ -315,69 +290,72 @@
 // Title: Water Leakage
 // Description: Pipeline leaking near the main road.
 
-
-
-
 import { useState } from "react";
 
 const App = () => {
-
   const [formData, setFormData] = useState({
     name: "",
-    email:"",
-    title:"",
-    department:"",
-    description:"",
+    email: "",
+    title: "",
+    gender: "",
+    description: "",
   });
 
   const [submittedData, setSubmittedData] = useState(null);
 
-  function handleSubmit(e){
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmittedData({ ...formData});
+    setSubmittedData({ ...formData });
 
+    alert("Form submitted successfully!");
     console.log(formData);
     console.log("Submitted");
-  }
+  };
 
   return (
     <div>
-
       <div className="heading text-xl text-center font-semibold">
-        <h1>Fill your Details</h1>
+        <h1 className=" text-2xl text-[#800020] font-semibold m-8">
+          Fill your Details
+        </h1>
       </div>
 
-      <form onSubmit={handleSubmit}>
-
-        <div className="user-input">
-          <label>Citizen Name: </label>
-          <input 
-             type="text"
-             value={formData.name}
-             onChange={(e)=>
-              setFormData({...formData, name: e.target.value})
-             }
+      <form
+        onSubmit={handleSubmit}
+        className="min-h-100 m-8 flex flex-col justify-center w-full max-w-md mx-auto p-8 bg-[#800020] rounded-lg text-shadow-xs text-[#F5F5DC]"
+      >
+        <div className="grid grid-cols-[110px_1fr] items-center gap-4 flex mb-4">
+          <label className="font-medium">Citizen Name: </label>
+          <input
+            className="w-full ml-2 pl-2 focus:outline-none border border-[#FFF8EF] rounded"
+            type="text"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            required
           />
         </div>
 
-
-         <div className="user-input">
-          <label>Email</label>
-          <input 
-             type="email"
-             value={formData.email}
-             onChange={(e)=>
-              setFormData({...formData, email: e.target.value})
-             }
+        <div className="grid grid-cols-[110px_1fr] items-center gap-4 flex mb-4">
+          <label className="font-medium ">Email: </label>
+          <input
+            className="w-full ml-2 pl-2 focus:outline-none border border-[#FFF8EF] rounded"
+            type="email"
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
+            required
           />
         </div>
 
-        <div className="user-input">
-          <select 
+        <div className="grid grid-cols-[110px_1fr] items-center gap-4 flex mb-4">
+          <label className="font-medium">Complaint Title: </label>
+          <select
+            className="w-full ml-2 pl-2 focus:outline-none border border-[#FFF8EF] rounded   [&>option]:bg-white [&>option]:text-[#800020]"
             type=""
             value={formData.title}
-            onChange={(e)=>
-              setFormData({...formData, title: e.target.value})
+            onChange={(e) =>
+              setFormData({ ...formData, title: e.target.value })
             }
           >
             <option value="water">Water Leakage</option>
@@ -386,71 +364,70 @@ const App = () => {
           </select>
         </div>
 
+        <div className="grid grid-cols-[110px_1fr] items-center gap-4 flex mb-4">
+          <label className="font-medium">Gender: </label>
+          <div className="ml-2 pl-2 focus:outline-none border border-[#FFF8EF] rounded w-full ">
+            <label className="font-medium ">
+              <input
+                className="mr-2"
+                type="radio"
+                value="Male"
+                name="gender"
+                checked={formData.gender === "Male"}
+                onChange={(e) =>
+                  setFormData({ ...formData, gender: e.target.value })
+                }
+              />
+              Male
+            </label>
 
-        <div className="gender-select">
-          <p>Select your Gender: </p>
-          <label>
-            <input 
-               type="radio"
-               value="Male"
-               name="gender"
-               checked={formData.gender === "Male"}
-               onChange={(e)=>
-                setFormData({...formData, gender: e.target.value})
-              }
-            />
-            Male
-          </label>
-
-          <label>
-            <input 
-               type="radio"
-               value="Female"
-               name="gender"
-               checked={formData.gender === "Female"}
-               onChange={(e)=>
-                setFormData({...formData, gender: e.target.value})
-              }
-            />
-            Female
-          </label>
+            <label className="font-medium px-2">
+              <input
+                className="mr-2"
+                type="radio"
+                value="Female"
+                name="gender"
+                checked={formData.gender === "Female"}
+                onChange={(e) =>
+                  setFormData({ ...formData, gender: e.target.value })
+                }
+              />
+              Female
+            </label>
+          </div>
         </div>
-        
 
-        <div className="user-input flex">
-          <label>Description</label>
+        <div className="grid grid-cols-[110px_1fr] items-center gap-4 flex mb-4">
+          <label className="font-medium ">Description</label>
           <textarea
+            className="ml-2 pl-2 focus:outline-none border border-[#FFF8EF] rounded w-full"
             type="text"
-            onChange={(e)=>
-              setFormData({...formData, description: e.target.value})
+            onChange={(e) =>
+              setFormData({ ...formData, description: e.target.value })
             }
+            required
           />
         </div>
 
-
-        <button>Submit</button>
-
+        <button
+          type="submit"
+          className="w-full text-[#800020] bg-[#F5F5DC] hover:bg-[#ccc] py-2 px-4 rounded font-semibold transition-colors duration-300"
+        >
+          Submit
+        </button>
       </form>
-
-
 
       {submittedData && (
         <div>
           <h1>Submitted Details</h1>
           <p>Citizen Name: {submittedData.name}</p>
           <p>Complaint Title: {submittedData.title}</p>
-          <p>Department: {submittedData.department}</p>
+          <p>Gender: {submittedData.gender}</p>
           <p>Complaint Description: {submittedData.description}</p>
         </div>
       )}
-      
     </div>
-  )
-}
+  );
+};
 
-export default App
-
-
-
-
-
+export default App;
